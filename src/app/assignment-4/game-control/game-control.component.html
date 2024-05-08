@@ -1,0 +1,17 @@
+<!-- 
+1. Create three new components: GameControl,Odd and Even
+2. The GameControl Component should have buttons to start and stop the game
+3. When starting the game, an event (holding an incrementing number) should get emitted each second (ref = setInterval())
+4. The event should be listenable from outside the component
+5. When stopping the game, no more events should get emitted (clearInterval(ref))
+6. A new odd component should get created for every odd number emitted, the same should happen for the even component (on even numbers)
+7. Simply Output Odd - NUMBER or Even - NUMBER in the 2 components
+8. Style the element holding your output text differently in both components 
+-->
+
+<button class="btn btn-primary" (click)="startGame()" [disabled]="gameStarted">
+  Start Game
+</button>
+<button class="btn btn-warning" (click)="stopGame()" [disabled]="!gameStarted">
+  Stop Game
+</button>
