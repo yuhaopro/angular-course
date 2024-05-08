@@ -5,7 +5,8 @@ This is a project and assignment completion repository of my attempt for the Ude
 
 ## Assignment Layout
 
-Each assignment is prefix with the `assignment-x` where `x` represents the assignment number.
+All assignment components are stored under the folder prefixed with the `assignment-x` where `x` represents the assignment number.
+Assignment for each project can also be tracked based on the branch `feat/assignment-x`.
 
 ## Run the application
 
