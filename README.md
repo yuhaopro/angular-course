@@ -1,4 +1,4 @@
-# AngularAssignments
+# Angular Assignments
 
 This is a project and assignment completion repository of my attempt for the Udemy course:
 #### Angular - The Complete Guide (2024 Edition) 
