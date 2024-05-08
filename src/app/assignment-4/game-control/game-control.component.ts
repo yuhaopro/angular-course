@@ -15,6 +15,7 @@ export class GameControlComponent {
   @Output() gameEvent: EventEmitter<number> = new EventEmitter<number>();
   gameStarted: boolean = false;
   counter: number = 0;
+  // https://stackoverflow.com/questions/42940954/cannot-find-namespace-nodejs-after-webpack-upgrade
   intervalId: NodeJS.Timeout | undefined;
   startGame() {
     // start emitting an event incrementing the number
