@@ -1,0 +1,35 @@
+<!-- 
+1. Add a input field which updates a property("username") via Two-Way-Binding
+2. Output the username property via String Interpolation (in a paragraph below the input)
+3. Add a button which may only be clicked if the username is NOT an empty string
+4. Upon clicking the button, the username should be reset to an empty string -->
+
+<div class="grid grid-cols-1 gap-3 justify-items-center items-center">
+  <label class="input input-bordered flex items-center gap-2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      class="w-4 h-4 opacity-70"
+    >
+      <path
+        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
+      />
+    </svg>
+    <input
+      type="text"
+      class="grow"
+      placeholder="Username"
+      [(ngModel)]="username"
+    />
+  </label>
+  <button
+    class="btn btn-primary max-w-sm"
+    (click)="resetInput()"
+    [disabled]="username === ''"
+  >
+    Generate
+  </button>
+
+  <p>{{ username }}</p>
+</div>
