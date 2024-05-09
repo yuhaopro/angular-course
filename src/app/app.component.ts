@@ -1,38 +1,27 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WarningAlertComponent } from './assignment-1/warning-alert/warning-alert.component';
-import { SuccessAlertComponent } from './assignment-1/success-alert/success-alert.component';
-import { DatabindingComponent } from './assignment-2/databinding/databinding.component';
-import { DirectivesComponent } from './assignment-3/directives/directives.component';
-import { GameControlComponent } from './assignment-4/game-control/game-control.component';
-import { OddComponent } from './assignment-4/odd/odd.component';
-import { EvenComponent } from './assignment-4/even/even.component';
+import { ActiveUsersComponent } from './assignment-5/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignment-5/inactive-users/inactive-users.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    WarningAlertComponent,
-    SuccessAlertComponent,
-    DatabindingComponent,
-    DirectivesComponent,
-    GameControlComponent,
-    OddComponent,
-    EvenComponent
-  ],
+  imports: [RouterOutlet, ActiveUsersComponent, InactiveUsersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  evenNumbers: number[] = [];
-  oddNumbers: number[] = [];
-  title = 'angular-assignments';
+  activeUsers = ['Max', 'Anna'];
+  inactiveUsers = ['Chris', 'Manu'];
 
-  updateDisplay(numberEmitted: number): void {
-    if (numberEmitted % 2 === 0) {
-      this.evenNumbers.push(numberEmitted);
-    } else {
-      this.oddNumbers.push(numberEmitted);
-    }
+  onSetToInactive(id: number) {
+    this.inactiveUsers.push(this.activeUsers[id]);
+    // removes the user at that id from the activeUsers array
+    this.activeUsers.splice(id, 1);
+  }
+
+  onSetToActive(id: number) {
+    this.activeUsers.push(this.inactiveUsers[id]);
+    // remove the users at that id from the inactiveUsers array
+    this.inactiveUsers.splice(id, 1);
   }
 }

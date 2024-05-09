@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { EvenComponent } from '../even/even.component';
 import { OddComponent } from '../odd/odd.component';
-import { TimeoutErrorCtor } from 'rxjs/internal/operators/timeout';
 
 @Component({
   selector: 'app-game-control',

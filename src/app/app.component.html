@@ -1,26 +1,12 @@
-<main class="grid h-screen w-screen gap-2 justify-center content-start">
-  <!-- Assignment 1 -->
-  <!-- <app-success-alert></app-success-alert>
-<app-warning-alert></app-warning-alert> -->
+<main
+  class="grid grid-cols-2 h-screen w-screen gap-2 justify-center items-start px-3"
+>
+  <!-- Assignment 5 -->
 
-  <!-- Assignment 2 -->
-  <!-- <app-databinding></app-databinding> -->
-
-  <!-- Assignment 3 -->
-  <!-- <app-directives></app-directives> -->
-
-  <!-- Assignment 4 -->
-  <div class="w-screen">
-    <app-game-control
-      (gameEvent)="updateDisplay($event)"
-      class="flex flex-row gap-2 justify-items-center items-center bg-primary w-full p-2 rounded-md"
-    ></app-game-control>
-  </div>
-  <div class="flex flex-col justify-center items-center gap-2">
-    @for (oddNumber of oddNumbers; track $index) {
-    <app-odd [odd]="oddNumber"></app-odd>
-
-    } @for (evenNumber of evenNumbers; track $index) {
-    <app-even [even]="evenNumber"></app-even>}
-  </div>
+  <app-active-users></app-active-users>
+  <app-inactive-users></app-inactive-users>
+  <!--
+        Optimize this app by adding a UsersService which manages the active and inactive users.
+        Also add a CounterService which counts the number of active->inactive and inactive->active actions.
+      -->
 </main>
